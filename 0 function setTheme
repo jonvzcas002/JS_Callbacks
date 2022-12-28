@@ -1,0 +1,15 @@
+function dark(color){
+  return 'Now the theme dark is ' + color + ' !';
+}
+
+function light(color){
+  return 'Now the theme light is ' + color + ' !';
+}
+
+// The functions of above are arguments into  the function setTheme 
+function setTheme(color, cb){
+  return cb(color)
+}
+
+setTheme("black", dark) // This is the output: 'Now the theme dark is black !' 
+setTheme("white", light) // This is the output: 'Now the theme light is white !'
